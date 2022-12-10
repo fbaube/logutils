@@ -1,6 +1,6 @@
 package logutils
 
-// StoredLogMsg is a log level + string message pair.
+// LogMessage is a log level + string message pair.
 // It should be accumulated into a slice by code that
 // does not have access to system logging facilities.
 //
@@ -9,7 +9,12 @@ package logutils
 // be passed to a logger. It could therefore be
 // created using the "%w" format specifier.
 // .
-type StoredLogMsg struct {
+type LogMessage struct {
 	Level
 	string
+}
+
+type LogMsgList []LogMessage
+
+func (llm LogMsgList) MaxLevel(maxLvl Level) {
 }
