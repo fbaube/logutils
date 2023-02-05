@@ -21,7 +21,7 @@ const (
 	*/
 )
 
-/*  This    RFC5424
+/*  This   RFC5424
 0   -      Emergency (system is unusable)
 1   -      Alert (take action ASAP)
 2  Panic   Critical
@@ -52,8 +52,7 @@ func EmojiOfLevel(L Level) string {
 	return "?!?!"
 }
 
-/*
-Stockpile of useful emojis:
+/* Stockpile of useful emojis:
 ⭕ ✅ ❌ ❎
 🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪
 🟥 🟧 🟨 🟩 🟦 🟪 🟫 ⬛ ⬜ ◾ ◽
