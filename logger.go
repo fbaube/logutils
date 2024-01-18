@@ -13,10 +13,10 @@ type Level int
 
 // RFC5424 log message levels.
 const (
-	LevelPanic    Level = iota + 2
-	LevelError          // 3
-	LevelWarning        // 4
-	LevelOkay           // 5
+	LevelPanic    Level = iota + 2 // i.e. 0 + 2 
+	LevelError          // 3 // red light 
+	LevelWarning        // 4 // yellow light 
+	LevelOkay           // 5 // green light
 	LevelInfo           // 6
 	LevelProgress       // 7
 	LevelDbg            // misspelled cos 8 != RFC5424 "7"
@@ -26,7 +26,7 @@ const (
 )
 
 /* NOTE also
-fromm the new package log/slog:
+from the new package log/slog:
 const (
 	LevelDebug Level = -4
 	LevelInfo  Level = 0
