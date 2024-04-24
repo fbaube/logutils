@@ -43,11 +43,11 @@ func EmojiOfLevel(L Level) string {
 	case 5:
 		return "🟩"
 	case 6:
-		return "💬"
+		return "ℹ️ " //  "💬"
 	case 7:
 		return "〰️"
 	case 8:
-		return "❓"
+		return "💠" //  "❓"
 	}
 	return "?!?!"
 }
@@ -57,4 +57,5 @@ func EmojiOfLevel(L Level) string {
 🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪
 🟥 🟧 🟨 🟩 🟦 🟪 🟫 ⬛ ⬜ ◾ ◽
 🔶 🔷 🔸 🔹 🔺 🔻 💠 🔘 🔳 🔲
+ⓘ ⓘ  🛈 ℹ️   
 */
