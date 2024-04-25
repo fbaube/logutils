@@ -18,8 +18,8 @@ const (
 	LevelWarning        // 4 // yellow light 
 	LevelOkay           // 5 // green light
 	LevelInfo           // 6
-	LevelProgress       // 7
-	LevelDbg            // misspelled cos 8 != RFC5424 "7"
+	// LevelProgress    // 7
+	LevelDebug          // 7
 	//
 	// Utility levels for fancier console output
 	GreenBG
@@ -53,8 +53,8 @@ using the appropriate integers.
 
 // LevelNames maps log levels to user-frenly names
 var LevelNames = map[Level]string{
-	LevelDbg:      "?Dbg",
-	LevelProgress: "Progress",
+	LevelDebug:    "?Dbg",
+	// LevelProgress: "Progress",
 	LevelInfo:     "Info",
 	LevelOkay:     "Okay",
 	LevelWarning:  "Warning",
