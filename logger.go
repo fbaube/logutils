@@ -25,6 +25,33 @@ const (
 	GreenBG
 )
 
+/* NOTE
+https://dave.cheney.net/2015/11/05/lets-talk-about-logging
+
+- we’ve ruled out warnings
+- we've argued that nothing should be logged at error level
+- we've shown that only the top level of the app should have
+  some kind of log.Fatal behaviour.
+
+What’s left ? I believe that there are only two things you should log:
+- Things that developers care about when developing or debugging software.
+- Things that users care about when using your software.
+
+Obviously these are debug and info levels, respectively.
+
+log.Info should simply write that line to the log output. There should
+not be an option to turn it off as the user should only be told things
+which are useful for them. If an error that cannot be handled occurs,
+it should bubble up main.main where the program terminates. The minor
+inconvenience of having to insert the FATAL prefix in front of the
+final log message, or writing directly to os.Stderr with fmt.Fprintf,
+does not justify a logging package growing a log.Fatal method.
+
+log.Debug, is an entirely different matter. The log package should
+support fine grained control to enable or disable debug, and only
+debug, statements at the package or possibly even finer scope.
+*/
+
 /* NOTE also
 from the new package log/slog:
 const (
